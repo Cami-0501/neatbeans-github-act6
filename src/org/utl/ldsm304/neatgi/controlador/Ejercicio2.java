@@ -5,26 +5,27 @@
 package org.utl.ldsm304.neatgi.controlador;
 
 import java.util.Scanner;
+import org.utl.ldsm304.neatgi.modelo.Matriz;
 
 /**
  *
  * @author camie
  */
 public class Ejercicio2 {
-      public String[][] Frutas = {
-        {"Mango", "Sandía", "Pera"},
-        {"Fresa", "Uva", "Kiwi"},
-        {"Aguacate", "Plátano", "Oliva"}
-    };
       
-      private void matriz() {
-        for (String[] fila : Frutas ) {
-            for (String cadena : fila) {
-                System.out.print(cadena + "\t");
+    public void imprimirFrutas(){
+      Matriz ma=new Matriz();
+      String[][] frutas= ma.getFrutas();
+      System.out.println("Matriz de Frutas:");
+        for (String[] fila : frutas) {
+            for (String fruta : fila) {
+                System.out.print(fruta + "\t");
             }
             System.out.println();
         }
-      }
+
+    }
+      
       
       public  void devuelverCadenasEpiezanO(String[][] Frutas){
          for (String[] fila : Frutas) {
@@ -80,5 +81,25 @@ public class Ejercicio2 {
         }
     }
 }
+      public void mostrarSilaba(String[][]Frutas){
+          System.out.println("\nCadenas que contienen la sílaba 'sa' o 'Sa':");
+    for (String[] fila : Frutas) {
+        for (String cadena : fila) {
+            boolean encontrado = false;
+            if (cadena != null && !cadena.isEmpty()) {
+                String cadenaLower = cadena.toLowerCase();
+                for (int i = 0; i < cadenaLower.length() - 1; i++) {
+                    if (cadenaLower.charAt(i) == 's' && cadenaLower.charAt(i + 1) == 'a') {
+                        encontrado = true;
+                        break;
+                    }
+                }
+            }
+            if (encontrado) {
+                System.out.println(cadena);
+            }
+        }
+    }
+      }
           
       }
