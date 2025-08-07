@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author camie
  */
 public class Ejercicio2 {
-      private String[][] Frutas = {
+      public String[][] Frutas = {
         {"Mango", "Sandía", "Pera"},
         {"Fresa", "Uva", "Kiwi"},
         {"Aguacate", "Plátano", "Oliva"}
