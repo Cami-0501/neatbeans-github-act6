@@ -42,41 +42,22 @@ public class Ejercicio2 {
       } 
       
       public void devolverCadena5Vocales(String[][]Frutas){
-            System.out.println("\nCadenas que tienen las 5 vocales:");
-    for (String[] fila : Frutas) {
-        for (String cadena : fila) {
-            if (cadena != null && !cadena.isEmpty()) {
-                boolean tieneA = false;
-                boolean tieneE = false;
-                boolean tieneI = false;
-                boolean tieneO = false;
-                boolean tieneU = false;
-                for (int i = 0; i < cadena.length(); i++) {
-                    char caracter = Character.toLowerCase(cadena.charAt(i));
-                    switch (caracter) {
-                        case 'a':
-                            tieneA = true;
-                            break;
-                        case 'e':
-                            tieneE = true;
-                            break;
-                        case 'i':
-                            tieneI = true;
-                            break;
-                        case 'o':
-                            tieneO = true;
-                            break;
-                        case 'u':
-                            tieneU = true;
-                            break;
-                    }
-                    if (tieneA && tieneE && tieneI && tieneO && tieneU) {
-                        break;
-                    }
+             for (int i = 0; i < Frutas.length; i++) {
+        for (int j = 0; j < Frutas[i].length; j++) {
+            String cadena = Frutas[i][j];
+            int contador = 0;
+
+          
+            for (int k = 0; k < cadena.length(); k++) {
+                char c = Character.toLowerCase(cadena.charAt(k));
+                if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                    contador++;
                 }
-                if (tieneA && tieneE && tieneI && tieneO && tieneU) {
-                    System.out.println(cadena);
-                }
+            }
+
+            // Imprimir si tiene exactamente 5 vocales
+            if (contador == 5) {
+                System.out.println("Cadena con 5 vocales: " + cadena);
             }
         }
     }
