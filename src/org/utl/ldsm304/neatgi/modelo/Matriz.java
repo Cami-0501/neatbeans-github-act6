@@ -23,7 +23,7 @@ public class Matriz {
     public String[][] Frutas = {
         {"Mango", "Sandía", "Pera"},
         {"Fresa", "Uva", "Kiwi"},
-        {"Aguacate", "Plátano", "Oliva"}
+        {"Aguacate", "eufonía", "Oliva"}
     };
 
     public String[][] getFrutas() {
