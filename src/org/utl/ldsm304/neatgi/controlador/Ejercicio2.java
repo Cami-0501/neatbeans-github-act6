@@ -9,5 +9,10 @@ package org.utl.ldsm304.neatgi.controlador;
  * @author camie
  */
 public class Ejercicio2 {
-    
+      private String[][] Frutas = {
+        {"Mango", "Sandía", "Pera"},
+        {"Fresa", "Uva", "Kiwi"},
+        {"Cereza", "Plátano", "Piña"}
+    };
+      
 }
