@@ -14,7 +14,7 @@ public class Ejercicio2 {
       private String[][] Frutas = {
         {"Mango", "Sandía", "Pera"},
         {"Fresa", "Uva", "Kiwi"},
-        {"Cereza", "Plátano", "Oliva"}
+        {"Aguacate", "Plátano", "Oliva"}
     };
       
       private void matriz() {
@@ -26,7 +26,7 @@ public class Ejercicio2 {
         }
       }
       
-      public  void devuelvenCadenasEpiezanO(String[][] Frutas){
+      public  void devuelverCadenasEpiezanO(String[][] Frutas){
          for (String[] fila : Frutas) {
             for (String cadena : fila) {
                 if (cadena.length() > 0) {
@@ -35,12 +35,50 @@ public class Ejercicio2 {
                         System.out.println(cadena);
                     }
                 }
-            }
-        
-              
+            }   
           }
-         
-         
-      
+     
       } 
+      
+      public void devolverCadena5Vocales(String[][]Frutas){
+            System.out.println("\nCadenas que tienen las 5 vocales:");
+    for (String[] fila : Frutas) {
+        for (String cadena : fila) {
+            if (cadena != null && !cadena.isEmpty()) {
+                boolean tieneA = false;
+                boolean tieneE = false;
+                boolean tieneI = false;
+                boolean tieneO = false;
+                boolean tieneU = false;
+                for (int i = 0; i < cadena.length(); i++) {
+                    char caracter = Character.toLowerCase(cadena.charAt(i));
+                    switch (caracter) {
+                        case 'a':
+                            tieneA = true;
+                            break;
+                        case 'e':
+                            tieneE = true;
+                            break;
+                        case 'i':
+                            tieneI = true;
+                            break;
+                        case 'o':
+                            tieneO = true;
+                            break;
+                        case 'u':
+                            tieneU = true;
+                            break;
+                    }
+                    if (tieneA && tieneE && tieneI && tieneO && tieneU) {
+                        break;
+                    }
+                }
+                if (tieneA && tieneE && tieneI && tieneO && tieneU) {
+                    System.out.println(cadena);
+                }
+            }
+        }
+    }
 }
+          
+      }
