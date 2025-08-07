@@ -19,4 +19,14 @@ public class Matriz {
     public int[][] getDatos() {
         return datos;
     }
+    
+    public String[][] Frutas = {
+        {"Mango", "Sandía", "Pera"},
+        {"Fresa", "Uva", "Kiwi"},
+        {"Aguacate", "Plátano", "Oliva"}
+    };
+
+    public String[][] getFrutas() {
+        return Frutas;
+    }
 }
