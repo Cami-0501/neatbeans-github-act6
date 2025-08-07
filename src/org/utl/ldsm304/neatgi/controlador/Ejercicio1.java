@@ -32,6 +32,7 @@ public class Ejercicio1 {
                 }
             }
         }
+        System.out.println("El numero mas repetido es: "+numeroMasRepetido);
         return numeroMasRepetido;
     }
 
@@ -45,6 +46,7 @@ public class Ejercicio1 {
                 }
             }
         }
+        System.out.println("la cantidad de numeros pares es: "+pares);
         return pares;
     }
 
@@ -58,6 +60,7 @@ public class Ejercicio1 {
                 }
             }
         }
+        System.out.println("La cantidad de numeros impares es: "+impares);
         return impares;
     }
     
