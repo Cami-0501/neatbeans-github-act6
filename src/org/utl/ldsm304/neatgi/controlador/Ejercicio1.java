@@ -60,4 +60,28 @@ public class Ejercicio1 {
         }
         return impares;
     }
+    
+    public static int sumarDiagonal(int[][] matriz) {
+        int suma = 0;
+        for (int i = 0; i < matriz.length; i++) {
+            suma += matriz[i][i];
+            System.out.println("Suma de la diagonal: "+suma);
+        }
+        return suma;
+    }
+    
+    public static int contarMultiplosDeCinco(int[][] matriz) {
+        int contador = 0;
+        for (int[] fila : matriz) {
+            for (int valor : fila) {
+                if (valor % 5 == 0) {
+                    contador++;
+                }
+                 System.out.println("Cantidad de múltiplos de 5: "+contador);
+            }
+        }
+        return contador;
+    }
+    
+    
 }
