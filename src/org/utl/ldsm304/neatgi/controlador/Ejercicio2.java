@@ -26,7 +26,7 @@ public class Ejercicio2 {
         }
       }
       
-      public  String devuelvenCadenasEpiezanO(String[][] Frutas){
+      public  void devuelvenCadenasEpiezanO(String[][] Frutas){
          for (String[] fila : Frutas) {
             for (String cadena : fila) {
                 if (cadena.length() > 0) {
@@ -39,9 +39,8 @@ public class Ejercicio2 {
         
               
           }
+         
+         
       
-      
-  
-      }
-           
+      } 
 }
